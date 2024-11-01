@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.se171889project.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_payment_history"
+            app:destination="@id/navigation_payment_history" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_cart"
+            app:destination="@id/navigation_cart" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_user_info"
+            app:destination="@id/navigation_user_info" />
+        <action
+            android:id="@+id/action_navigation_home_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="com.example.se171889project.ui.cart.CartFragment"
+        android:label="@string/title_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_navigation_cart_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_cart_to_navigation_payment_history"
+            app:destination="@id/navigation_payment_history" />
+        <action
+            android:id="@+id/action_navigation_cart_to_navigation_user_info"
+            app:destination="@id/navigation_user_info" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_payment_history"
+        android:name="com.example.se171889project.ui.payment.PaymentHistoryFragment"
+        android:label="@string/title_payment_history"
+        tools:layout="@layout/fragment_payment_history" >
+        <action
+            android:id="@+id/action_navigation_payment_history_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_payment_history_to_navigation_user_info"
+            app:destination="@id/navigation_user_info" />
+        <action
+            android:id="@+id/action_navigation_payment_history_to_navigation_cart"
+            app:destination="@id/navigation_cart" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_user_info"
+        android:name="com.example.se171889project.ui.user.UserInfoFragment"
+        android:label="@string/title_user_info"
+        tools:layout="@layout/fragment_user_info" >
+        <action
+            android:id="@+id/action_navigation_user_info_to_navigation_payment_history"
+            app:destination="@id/navigation_payment_history" />
+        <action
+            android:id="@+id/action_navigation_user_info_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_user_info_to_navigation_cart"
+            app:destination="@id/navigation_cart" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.example.se171889project.ui.productdetail.ProductDetailFragment"
+        android:label="Product Detail" >
+        <action
+            android:id="@+id/action_productDetailFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+<!--        <action-->
+<!--            android:id="@+id/action_productDetailFragment_to_navigation_cart"-->
+<!--            app:destination="@id/navigation_cart" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_productDetailFragment_to_navigation_user_info"-->
+<!--            app:destination="@id/navigation_user_info" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_productDetailFragment_to_navigation_payment_history"-->
+<!--            app:destination="@id/navigation_payment_history" />-->
+    </fragment>
+
+</navigation>
