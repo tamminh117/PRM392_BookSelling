@@ -2,7 +2,7 @@ package com.example.bookstore;
 
 import android.os.Bundle;
 
-import com.example.se171889project.R;
+import com.example.bookstore.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,7 +11,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.se171889project.databinding.ActivityHomeBinding;
+import com.example.bookstore.databinding.ActivityHomeBinding;
 
 public class HomeActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.se171889project.ui.user;
+package com.example.bookstore.ui.user;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.bookstore.MainActivity;
-import com.example.se171889project.R;
+import com.example.bookstore.R;
 import com.example.bookstore.admin.ProductManagementActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
