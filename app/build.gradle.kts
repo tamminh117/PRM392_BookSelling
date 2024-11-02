@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.se171889project"
+    namespace = "com.example.bookstore"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.se171889project"
+        applicationId = "com.example.bookstore"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

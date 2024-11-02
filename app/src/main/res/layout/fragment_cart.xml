@@ -36,6 +36,7 @@
         android:id="@+id/checkout_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#42a0e3"
         android:text="Check out"
         android:layout_marginBottom="60dp"/>
 
