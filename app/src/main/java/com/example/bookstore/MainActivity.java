@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         logIn = findViewById(R.id.login_btn);
         signUp = findViewById(R.id.signup_textview);
 
+
         // Set up the sign-up click listener
         signUp.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, SignupActivity.class);
