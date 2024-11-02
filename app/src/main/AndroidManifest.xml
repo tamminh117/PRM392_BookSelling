@@ -24,7 +24,8 @@
             android:exported="false" />
         <activity
             android:name=".admin.ProductManagementActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

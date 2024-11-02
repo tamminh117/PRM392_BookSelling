@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -30,13 +31,13 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProductManagementActivity extends AppCompatActivity {
     private ListView listViewProducts;
-    private Button logoutButton;
     private ProductAdapter adapter;
     private List<Product> productList;
     private DatabaseReference databaseReference;
@@ -52,10 +53,18 @@ public class ProductManagementActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_management);
 
-        auth = FirebaseAuth.getInstance();
-        logoutButton = findViewById(R.id.logout_button);
+        // Initialize back button
+        ImageButton backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(v -> {
+            onBackPressed();
+        });
 
+        auth = FirebaseAuth.getInstance();
+
+        // Initialize views
         listViewProducts = findViewById(R.id.product_list_view1);
+        ImageButton logoutButton = findViewById(R.id.logout_button);
+
         productList = new ArrayList<>();
         adapter = new ProductAdapter(this, R.layout.list_item_product, productList);
         listViewProducts.setAdapter(adapter);
@@ -67,22 +76,21 @@ public class ProductManagementActivity extends AppCompatActivity {
 
         listViewProducts.setOnItemClickListener((parent, view, position, id) -> {
             Product selectedProduct = productList.get(position);
-            showProductDialog(selectedProduct); // Hiển thị dialog cho sản phẩm đã chọn
+            showProductDialog(selectedProduct);
         });
 
-        // Logout button event
-        logoutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                auth.signOut();
-                Intent intent = new Intent(ProductManagementActivity.this, MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-                finish(); // Đóng ProductActivity sau khi logout
-            }
+        // Initialize FAB
+        FloatingActionButton addButton = findViewById(R.id.add_product_button);
+        addButton.setOnClickListener(v -> showProductDialog(null));
+
+        // Handle logout
+        logoutButton.setOnClickListener(v -> {
+            auth.signOut();
+            Intent intent = new Intent(ProductManagementActivity.this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
         });
-        //add btn
-        findViewById(R.id.add_product_button).setOnClickListener(v -> showProductDialog(null));
     }
 
     private void loadProductsFromFirebase() {
@@ -112,6 +120,10 @@ public class ProductManagementActivity extends AppCompatActivity {
         dialog.setContentView(R.layout.dialog_product);
 
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+        // Initialize exit button
+        ImageButton exitButton = dialog.findViewById(R.id.buttonExit);
+        exitButton.setOnClickListener(v -> dialog.dismiss());
 
         EditText editTextName = dialog.findViewById(R.id.editTextProductName);
         EditText editTextPrice = dialog.findViewById(R.id.editTextProductPrice);
