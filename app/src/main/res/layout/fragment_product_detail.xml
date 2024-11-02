@@ -33,14 +33,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="10">
 
             <TextView
-                android:layout_width="160dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:text="Tên: "
+                android:layout_marginEnd="10dp"
                 android:layout_weight="1"/>
 
             <TextView
@@ -48,7 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
-                android:layout_weight="1"/>
+                android:layout_weight="9"/>
 
         </LinearLayout>
 
@@ -71,6 +73,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="9"
+                android:layout_marginStart="17dp"
                 android:textColor="#f0a235"
                 android:textSize="20sp" />
 
@@ -92,10 +95,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:orientation="horizontal"
+                android:weightSum="10"
                 android:layout_weight="1">
 
                 <TextView
-                    android:layout_width="150dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:textSize="24sp"
                     android:textStyle="bold"
@@ -108,7 +112,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
                     android:textColor="@android:color/darker_gray"
-                    android:layout_weight="1"/>
+                    android:layout_weight="9"/>
             </LinearLayout>
 
             <!-- EditText để chọn số lượng -->
