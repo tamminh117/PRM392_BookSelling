@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SE171889Project</string>
+    <string name="app_name">BookStore</string>
     <!--    <string name="app_name">Firebase Auth</string>-->
     <string name="action_sign_in_short">Register</string>
     <string name="email">Email</string>
