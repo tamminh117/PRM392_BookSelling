@@ -17,10 +17,14 @@
         android:orientation="vertical"
         android:layout_centerInParent="true">
 
-        <ImageView
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:src="@drawable/logo"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FBook"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"/>
 
         <TextView
             android:layout_width="wrap_content"
