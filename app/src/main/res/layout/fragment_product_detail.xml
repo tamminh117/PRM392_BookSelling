@@ -3,11 +3,10 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    android:padding="16dp">
 
-    <!-- Toolbar without padding -->
-
-    <!-- Content container with padding -->
+    <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -21,42 +20,42 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:padding="8dp"
             android:src="@drawable/ic_back" />
-
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:paddingTop="8dp">
 
+        <!-- Product Name -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="160dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:text="Tên: "
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
 
             <TextView
                 android:id="@+id/product_name_detail"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
-                android:layout_weight="1"/>
-
+                android:layout_weight="3" />
         </LinearLayout>
 
+        <!-- Product Price -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="10">
+            android:layout_marginTop="8dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -64,70 +63,76 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:text="Giá: "
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
 
             <TextView
                 android:id="@+id/product_price_detail"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
                 android:textColor="#f0a235"
                 android:textSize="20sp" />
-
         </LinearLayout>
 
+        <!-- Product Image -->
         <ImageView
             android:id="@+id/product_image_detail"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="250dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_launcher_background"
             android:layout_marginTop="8dp"/>
 
+        <!-- Product Description and Quantity -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:orientation="horizontal"
-                android:layout_weight="1">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="150dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     android:text="Mô tả: "
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/product_description"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
+                    android:textSize="20dp"
                     android:textColor="@android:color/darker_gray"
-                    android:layout_weight="1"/>
+                    android:layout_weight="3" />
             </LinearLayout>
 
-            <!-- EditText để chọn số lượng -->
+            <!-- Quantity EditText -->
             <EditText
                 android:id="@+id/quantity_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nhập số lượng"
-                android:layout_weight="1"
-                android:inputType="number"/>
+                android:inputType="number"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:background="@color/white" />
         </LinearLayout>
 
-            <!-- Nút thêm vào giỏ hàng -->
-            <Button
-                android:id="@+id/add_to_cart_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Thêm vào giỏ hàng"
-                android:layout_marginTop="16dp"/>
+        <!-- Add to Cart Button -->
+        <Button
+            android:id="@+id/add_to_cart_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/btn_login"
+            android:text="Thêm vào giỏ hàng"
+            android:textColor="@android:color/white" />
 
     </LinearLayout>
 </LinearLayout>

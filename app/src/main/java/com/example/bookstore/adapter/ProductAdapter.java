@@ -49,12 +49,11 @@ public class ProductAdapter extends ArrayAdapter<Product> {
         nameTextView.setText(product.getName());
         priceTextView.setText(String.format("$%.2f", product.getPrice()));  // Display price as $xx.xx
 
-        // Use Glide to load the product image from URL
         Glide.with(context)
                 .load(product.getImageUrl())  // URL of the product image
                 .placeholder(R.drawable.ic_launcher_foreground)  // Placeholder image when loading
                 .error(R.drawable.error_image)  // Error image if loading fails
-                .into(imageView);
+                .into(imageView);  // Load the image into the ImageView
 
         return convertView;
     }
