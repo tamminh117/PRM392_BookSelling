@@ -6,12 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import com.bumptech.glide.Glide;
 import com.example.bookstore.R;
@@ -37,6 +40,20 @@ public class ProductDetailFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_product_detail, container, false);
+
+        // Add this near the start of onCreateView
+        requireActivity().getOnBackPressedDispatcher().addCallback(getViewLifecycleOwner(), new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                Navigation.findNavController(root).navigate(R.id.action_productDetailFragment_to_navigation_home);
+            }
+        });
+
+        // Add this after your view initialization
+        ImageButton backButton = root.findViewById(R.id.back_button);
+        backButton.setOnClickListener(v -> {
+            Navigation.findNavController(root).navigate(R.id.action_productDetailFragment_to_navigation_home);
+        });
 
         // Khởi tạo Firebase
         firebaseAuth = FirebaseAuth.getInstance();

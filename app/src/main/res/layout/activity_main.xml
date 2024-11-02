@@ -25,21 +25,21 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome Back!"
+            android:text="Chào mừng"
             android:textSize="36dp"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:layout_marginTop="15dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Timeless Moments Await"
-            android:textSize="20sp"
-            android:textColor="#828382"
-            android:textStyle="italic"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="5dp"/>
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Timeless Moments Await"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textColor="#828382"-->
+<!--            android:textStyle="italic"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:layout_marginTop="5dp"/>-->
 
         <EditText
             android:layout_width="match_parent"
@@ -60,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:hint="Password"
+            android:hint="Mật khẩu"
             android:backgroundTint="#F6F6F7"
             android:textColor="#828382"
             android:textColorHint="#828382"
@@ -90,7 +90,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="Đăng nhập"
             android:backgroundTint="@color/bg_login"
             android:textColor="#FFFFFF"
             android:padding="18dp"
@@ -98,13 +98,13 @@
             android:textSize="20sp"
             android:id="@+id/login_btn"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="OR"
-            android:textSize="30dp"
-            android:textColor="#848589"
-            android:layout_marginTop="20dp"/>
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="OR"-->
+<!--            android:textSize="15dp"-->
+<!--            android:textColor="#848589"-->
+<!--            android:layout_marginTop="20dp"/>-->
 
 
         <LinearLayout
@@ -117,15 +117,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't have an account?"
-                android:textSize="22dp"
+                android:text="Chưa có tài khoản?"
+                android:textSize="18dp"
                 android:textColor="@color/black"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sign up"
-                android:textSize="22dp"
+                android:text="Đăng ký"
+                android:textSize="18dp"
                 android:textColor="@color/bg_main"
                 android:textStyle="bold|italic"
                 android:layout_marginStart="10dp"

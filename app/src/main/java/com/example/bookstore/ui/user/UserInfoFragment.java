@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.bookstore.MainActivity;
 import com.example.bookstore.R;
+import com.example.bookstore.admin.ProductManagementActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -31,6 +32,8 @@ public class UserInfoFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_user_info, container, false);
+
+        Button adminButton = root.findViewById(R.id.btn_admin_management);
 
         tvUserId = root.findViewById(R.id.tv_user_id);
         tvUserEmail = root.findViewById(R.id.tv_user_email);
@@ -76,6 +79,19 @@ public class UserInfoFragment extends Fragment implements OnMapReadyCallback {
             }
         });
 
+        // Check if user is admin
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        String userEmail = auth.getCurrentUser().getEmail();
+
+        // Show admin button only for admin email
+        if (userEmail != null && userEmail.equals("admin@gmail.com")) {
+            adminButton.setVisibility(View.VISIBLE);
+        }
+
+        adminButton.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), ProductManagementActivity.class);
+            startActivity(intent);
+        });
 
         SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map_fragment);
         if (mapFragment != null) {

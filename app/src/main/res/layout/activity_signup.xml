@@ -25,21 +25,21 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create New Account"
+            android:text="Tạo tài khoản"
             android:textSize="36dp"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:layout_marginTop="15dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sign up to capture every moment!"
-            android:textSize="20sp"
-            android:textColor="#828382"
-            android:textStyle="italic"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="5dp" />
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Sign up to capture every moment!"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textColor="#828382"-->
+<!--            android:textStyle="italic"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:layout_marginTop="5dp" />-->
 
         <EditText
             android:layout_width="match_parent"
@@ -60,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:hint="Password"
+            android:hint="Mật khẩu"
             android:backgroundTint="#F6F6F7"
             android:textColor="#828382"
             android:textColorHint="#828382"
@@ -71,10 +71,26 @@
             android:drawableStart="@drawable/outline_catching_pokemon_24"
             android:id="@+id/password_input" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <!--            <RadioButton-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="Remember me"-->
+            <!--                android:textColor="#828382"-->
+            <!--                android:textSize="20sp"-->
+            <!--                android:id="@+id/remember_me_radio"/>-->
+        </LinearLayout>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sign up"
+            android:text="Đăng ký"
             android:backgroundTint="@color/bg_login"
             android:textColor="#FFFFFF"
             android:padding="18dp"
@@ -86,21 +102,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="8dp"
             android:gravity="center">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Already have an account?"
-                android:textSize="22dp"
+                android:text="Đã có tài khoản?"
+                android:textSize="18dp"
                 android:textColor="@color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sign in"
-                android:textSize="22dp"
+                android:text="Đăng nhập"
+                android:textSize="18dp"
                 android:textColor="@color/bg_main"
                 android:textStyle="bold|italic"
                 android:layout_marginStart="10dp"
