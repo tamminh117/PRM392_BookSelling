@@ -2,17 +2,17 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home"
-        android:title="Home" />
+        android:title="Trang chủ" />
     <item
         android:id="@+id/navigation_cart"
         android:icon="@drawable/ic_cart"
-        android:title="Cart" />
+        android:title="Giỏ hàng" />
     <item
         android:id="@+id/navigation_payment_history"
         android:icon="@drawable/ic_payment"
-        android:title="Payment History" />
+        android:title="Lịch sử" />
     <item
         android:id="@+id/navigation_user_info"
         android:icon="@drawable/user_icon"
-        android:title="User Info" />
+        android:title="Thông tin" />
 </menu>
